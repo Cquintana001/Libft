@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 13:48:57 by caquinta          #+#    #+#             */
-/*   Updated: 2022/03/30 08:30:07 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:47:50 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <unistd.h>
 void	ft_bzero(void *s, size_t n);
 
-int	main(void)
+/* int	main(void)
 {
 	 
 	char array1[] = "Hola";
@@ -32,10 +32,10 @@ int	main(void)
 	write(1, "\n", 1);
 	write(1, &array2[3], 1);
 	return (0);
-}
+} */
 void	ft_bzero(void *s, size_t n)
 {
-	int		x;
+	size_t		x;
 	char	*f;
 
 	x = 0;

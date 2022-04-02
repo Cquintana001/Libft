@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:32:21 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 13:56:17 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:43:37 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char *strchr(const char *s, int c);
 
-int main()
+/* int main()
 {
 	char array[] = "Hola";
 
@@ -25,7 +25,7 @@ int main()
 
 	return(0);
 
-}
+} */
 
 char *strchr(const char *s, int c)
 {	int x;

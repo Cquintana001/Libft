@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:21:13 by caquinta          #+#    #+#             */
-/*   Updated: 2022/03/29 10:50:24 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 17:20:50 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c <= 10 && c >= 0)
-		return (0);
-	return (1);
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
 }

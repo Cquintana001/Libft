@@ -6,9 +6,11 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:32:49 by caquinta          #+#    #+#             */
-/*   Updated: 2022/03/30 10:13:31 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:46:47 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {	

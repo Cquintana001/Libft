@@ -6,12 +6,12 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:54:51 by caquinta          #+#    #+#             */
-/*   Updated: 2022/03/30 11:41:36 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:43:07 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
  
-#include <memory.h>
+/* #include <memory.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -33,4 +33,4 @@ int main()
    memmove( (str2+6), str2, 10 );
    printf( "New string: %s\n", str2 );
 
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:10:29 by caquinta          #+#    #+#             */
-/*   Updated: 2022/03/30 14:20:54 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:43:46 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 
-int main()
+/* int main()
 {
 	char array1[] = "Hola mundo a todos";
 	char array2[] = "Estamos trabajando en ello";
@@ -25,7 +25,7 @@ int main()
 	printf("Array2 con la funcion sizeof da:%lu\n", sizeof(array2));
 	printf("Mi funcion da: %lu\n", ft_strlcpy(array1, array2, 4));
 	printf("array1 da: %s\n\n", array1);
-}
+} */
 
 size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {	
