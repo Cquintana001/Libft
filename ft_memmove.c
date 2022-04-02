@@ -6,31 +6,37 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:54:51 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 15:43:07 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 18:57:20 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- 
-/* #include <memory.h>
-#include <string.h>
+#include <memory.h>
 #include <stdio.h>
+#include <string.h>
 
- 
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
-int main()
+/* int	main(void)
 {
-	char str1[7] = "abcdef";
+	char	src[]= "hola a todos";
+	char	dst[]= "";
 
-   printf( "The string: %s\n", str1 );
-   memcpy( (str1+6), str1, 10 );
-   printf( "New string: %s\n", str1 );
-
-    
-	char str2[] = "abcdef";
-
-   printf("\nstr1: %s\n", str2);
-   printf( "The string: %s\n", str2 );
-   memmove( (str2+6), str2, 10 );
-   printf( "New string: %s\n", str2 );
-
+		
+	printf("Mi  funcion da: %s", ft_memmove(dst, src, 4));
 } */
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	char	*array;
+	char	*array2;
+	size_t	x;
+
+	array = (char *)src;
+	array2 = (char *)dst;
+	x = 0;
+	while (x < len)
+	{
+		array2[x] = array[x];
+		x++;
+	}
+	return (dst);
+}

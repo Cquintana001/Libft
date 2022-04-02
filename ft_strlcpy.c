@@ -6,14 +6,15 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:10:29 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 15:43:46 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 17:51:40 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+			size_t dstsize);
 
 /* int main()
 {
@@ -27,18 +28,18 @@ size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
 	printf("array1 da: %s\n\n", array1);
 } */
 
-size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {	
-	size_t x;
+	size_t	x;
 
 	x = 0;
-	while(dst[x] && src[x] && x<dstsize)
+	while (dst[x] && src[x] && x < dstsize)
 	{
 		dst[x] = src[x];
 		x++;
 	}
 	x = 0;
-	while(src[x])
+	while (src[x])
 		x++;
-	return(x);
+	return (x);
 }

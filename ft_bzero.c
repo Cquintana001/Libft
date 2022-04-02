@@ -6,13 +6,14 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 13:48:57 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 15:47:50 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/02 18:48:13 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <strings.h>
 #include <unistd.h>
+
 void	ft_bzero(void *s, size_t n);
 
 /* int	main(void)
@@ -36,7 +37,7 @@ void	ft_bzero(void *s, size_t n);
 void	ft_bzero(void *s, size_t n)
 {
 	size_t		x;
-	char	*f;
+	char		*f;
 
 	x = 0;
 	f = s;
@@ -48,4 +49,5 @@ void	ft_bzero(void *s, size_t n)
 			x++;
 		}
 	}
+	
 }
