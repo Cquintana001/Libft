@@ -6,40 +6,53 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:10:29 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 17:51:40 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/03 18:33:11 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 			size_t dstsize);
 
 /* int main()
 {
-	char array1[] = "Hola mundo a todos";
-	char array2[] = "Estamos trabajando en ello";
+		char    *dest;
+	size_t	x;
+	size_t	size;
 
-	printf("\nLa funcion original da: %lu\n",strlcpy(array1, array2, 4));
-	printf("array1 da: %s\n\n", array1);
-	printf("Array2 con la funcion sizeof da:%lu\n", sizeof(array2));
-	printf("Mi funcion da: %lu\n", ft_strlcpy(array1, array2, 4));
-	printf("array1 da: %s\n\n", array1);
+		dest = (char *)malloc(sizeof(*dest) * 15);
+	memset(dest, 0, 15);
+    memset(dest, 'r', 6);
+	printf("Mi funcion da: %zu\n", ft_strlcpy(dest,
+				"lorem ipsum dolor sit amet", 0));
+	printf("%s\n", dest);
+	printf("La funcion original da: %zu\n", strlcpy(dest,
+				"lorem ipsum dolor sit amet", 0));
+	printf("%s", dest);
+	
 } */
-
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {	
 	size_t	x;
+	size_t	size;
 
-	x = 0;
-	while (dst[x] && src[x] && x < dstsize)
-	{
-		dst[x] = src[x];
-		x++;
-	}
 	x = 0;
 	while (src[x])
 		x++;
-	return (x);
+	size = x;
+	x = 0;
+	if (dstsize != 0)
+	{
+		while (src[x] && x < dstsize - 1)
+		{
+			dst[x] = src[x];
+			x++;
+		}
+		dst[x] = '\0';
+	}
+	return (size);
 }
