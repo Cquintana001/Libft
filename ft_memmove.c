@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:54:51 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 19:39:27 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/03 11:49:48 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-int		main()
+/* int		main()
 {
 	char	src[] = "lorem ipsum dolor sit amet";
 	char	*dest;
@@ -27,7 +27,7 @@ int		main()
 	dest = src + 1;
 	alarm(5);
 	 
-		/* if (dest != ft_memmove(dest, "consectetur", 5))
+		if (dest != ft_memmove(dest, "consectetur", 5))
 			write(1, "dest's adress was not returned\n", 31);
 		write(1, dest, 22);
 		write(1, "\n",1);
@@ -46,12 +46,12 @@ int		main()
 		write(1, dest, 22);
 		write(1, "\n",1);
 	
-	  */
+	 
 	
-		/* if (src != ft_memmove(src, dest, 8))
+		if (src != ft_memmove(src, dest, 8))
 			write(1, "dest's adress was not returned\n", 31);
 		write(1, dest, 22);
-		write(1, "\n",1); */
+		write(1, "\n",1);
 	
 	 
 	
@@ -60,7 +60,7 @@ int		main()
 		write(1, dest, 22);
 	
 	return (0);
-}
+} */
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

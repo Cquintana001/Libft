@@ -6,14 +6,14 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:32:21 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 15:43:37 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/03 11:30:11 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char *strchr(const char *s, int c);
+char *ft_strchr(const char *s, int c);
 
 /* int main()
 {
@@ -27,7 +27,7 @@ char *strchr(const char *s, int c);
 
 } */
 
-char *strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {	int x;
  
 
