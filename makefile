@@ -14,7 +14,7 @@ SRC = ft_isdigit.c 	\
 	ft_tolower.c 	\
 	ft_strchr.c 	\
 	ft_strrchr.c 	\
-	 
+	ft_strnstr.c	\
 	 
 	 
 	 
