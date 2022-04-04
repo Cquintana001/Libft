@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:19:01 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/04 20:40:13 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/04 20:52:00 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ int main()
 	
 	printf("La funcion original da: %lu\n", strlcat(array1, array2, 4));
 
-	printf("%s\n", array1);
+	printf("array1 da: %s\n", array1);
+	printf("array2 da: %s\n", array2);
 	
 	char array3[] = "Hola";
 	char array4[] = "Adios";
 	
 	printf("Mi funcion da: %zu\n", ft_strlcat(array3, array4, 4));
 
-	printf("%s\n", array1);
+	printf("array1 da: %s\n", array1);
+	printf("array2 da: %s\n", array2);
 	
 
 
