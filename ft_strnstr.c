@@ -3,55 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 18:12:27 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/04 13:52:06 by user             ###   ########.fr       */
+/*   Updated: 2022/04/04 19:05:28 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 #include <stdio.h>
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-/*int main()
+/* int	main(void)
 {
-	char array1[] = "Hola a todos";
-	char array2[] = "to";
-	 
-	printf("Mi funcion da: %s\n", ft_strnstr(array1, array2, 1));
+	const char	*str;
 
+	str = ft_strnstr("lorem ipsum dolor sit amet", "lorem", 15);
+	printf("El primer test da: %s\n", str);
+	str = ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15);
+	printf("El segundo test da: %s\n", str);
+	str = ft_strnstr("lorem ipsum dolor sit lorem ipsum dolor", "ipsum", 35);
+	printf("El tercer test da: %s\n", str);
+	str = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+	printf("El noveno test da: %s\n", str);
+	return (0);
+} */
 
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	x;
+	size_t	y;
+	size_t	z;
+	char	*hay;
 
-}*/
-
-
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
-{	
-	int x;
-	int y;
-	size_t z;
-
-	char *hay = (char*)haystack;
-	z=1;
-	 x=0;
-	 if(!needle[0])
-	 	return(hay);
-	 while(haystack[x])
-	 {
-		if(haystack[x] == needle[0])
+	hay = (char *)haystack;
+	z = 1;
+	x = 0;
+	if (!needle[0])
+		return (hay);
+	while (haystack[x] && x < len)
+	{
+		if (haystack[x] == needle[0])
 		{
-			y =x;
-			while(haystack[y]==needle[y] && z <=len )
+			y = x + 1;
+			while (haystack[y] == needle[z] && needle[z] && haystack[y] && y
+				- 1 < len)
 			{
 				y++;
 				z++;
 			}
-			if(z == len)
-				return(hay + x);
+			if (z == ft_strlen(needle))
+				return (hay + x);
 		}
 		x++;
-	 }
-	 return(NULL);
+	}
+	return (NULL);
 }
