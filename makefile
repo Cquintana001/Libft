@@ -16,7 +16,7 @@ SRC = ft_isdigit.c 	\
 	ft_strrchr.c 	\
 	ft_strnstr.c	\
 	ft_strlcat.c    \
-	 
+	 ft_atoi.c      \
 	 
 	 
 
