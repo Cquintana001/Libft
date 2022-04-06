@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 13:48:57 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/02 18:48:13 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:09:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <strings.h>
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
-
+void	*ft_memset(void *b, int c, size_t len);
 /* int	main(void)
 {
 	 
@@ -35,19 +36,6 @@ void	ft_bzero(void *s, size_t n);
 	return (0);
 } */
 void	ft_bzero(void *s, size_t n)
-{
-	size_t		x;
-	char		*f;
-
-	x = 0;
-	f = s;
-	if (n != 0)
-	{
-		while (f[x] && x < n)
-		{
-			f[x] = '\0';
-			x++;
-		}
-	}
-	
+{	 
+    ft_memset(s, '\0', n);	
 }
