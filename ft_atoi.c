@@ -6,42 +6,47 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:02:48 by user              #+#    #+#             */
-/*   Updated: 2022/04/06 16:34:36 by user             ###   ########.fr       */
+/*   Updated: 2022/04/06 18:45:03 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int ft_atoi(const char *nptr);
 
-int atoi(const char *nptr);
-int main ()
+/*int main()
 {
+	  
+	 printf("%d\n", ft_atoi("\t\n\r\v\f  469 \n"));
+	 printf("%d\n", atoi("\t\n\r\v\f  469 \n"));
 
-    char num1 = "0";
+	 return 0;
 
-    printf()
-    
-}
-int atoi(const char *nptr)
+
+ }*/
+
+int ft_atoi(const char *nptr)
 {
     int	sum;
 	int	sign;
-	int	x;
+	 
 
 	sum = 0;
 	sign = 1;
-	x = 0;
-    while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\f' || *nptr == '\r')
+	 
+    while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\f' || *nptr == '\r'||*nptr == '\v')
 		nptr++;
 	if (*nptr == '-')
 		sign = -1;
 	if (*nptr == '-' || *nptr == '+')
 		nptr++;
-    while (nptr[x] >= '0' && nptr[x] <= '9')
+    while (*nptr >= '0' && *nptr <= '9')
 	{
 		 
 			sum = sum * 10 + *nptr - '0';
 		 
-		x++;
+		nptr++;
 	}
-    return(sum);
+    return(sum*sign);
 }
