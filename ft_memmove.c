@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:54:51 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/03 11:49:48 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:41:02 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		array2[x] = array[x];
 		x++;
 	}
+	  dst = array2;
 	return (dst);
 }
