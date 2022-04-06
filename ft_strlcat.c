@@ -13,23 +13,23 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <bsd/string.h>
-
+#include "libft.h"
 size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
-
+size_t ft_strlen(const char *s);
 
 int main()
 {
-	char array1[11] = "Hola";
-	char array2[] = "Adioss";
+	char array1[16] = "This is ";
+	char array2[] = "a potentially long string";
 	
 	printf("La funcion original da: %zu\n", strlcat(array1, array2, 0));
 
 	printf("array1 da: %s\n", array1);
 	printf("array2 da: %s\n", array2);
 	
-	char array3[] = "Hola";
-	char array4[] = "Adioss";
-	
+	char array3[16] = "This is ";
+	char array4[] = "a potentially long string";
+		
 	printf("Mi funcion da: %zu\n", ft_strlcat(array3, array4, 0));
 
 	printf("array1 da: %s\n", array1);
@@ -43,14 +43,15 @@ int main()
 size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
 	size_t	x;
-	size_t	size;
+	size_t	srclen;
+	size_t dstlen;
 	size_t y;
+
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
 
 	x = 0;
 	y = 0;
-	while (dst[x])
-		x++; 
-	size=x;
 	if (dstsize != 0)
 	{
 		while (src[y] && x < dstsize - 1)
@@ -61,14 +62,12 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 		}
 		dst[x] = '\0';
 	}
-	x = 0;
-	while (src[x])
-		x++;
-	size += x;
-	if(dstsize!=0)
+	
+
+	if(dstsize+ srclen < srclen + dstlen)
 	{
-	return (size);
+	return (dstsize + srclen);
 	}
 	else 
-		return(x);
+		return(srclen + dstlen );
 }
