@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:02:48 by user              #+#    #+#             */
-/*   Updated: 2022/04/06 16:31:29 by user             ###   ########.fr       */
+/*   Updated: 2022/04/06 16:34:36 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ int atoi(const char *nptr);
 int main ()
 {
 
+    char num1 = "0";
 
+    printf()
     
 }
 int atoi(const char *nptr)
