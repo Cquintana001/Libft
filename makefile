@@ -19,6 +19,8 @@ SRC = ft_isdigit.c 	\
 	ft_atoi.c      \
 	ft_memchr.c    \
 	ft_memcmp.c    \
+	ft_calloc.c    \
+	ft_strdup.c    \
 	 
 	 
 

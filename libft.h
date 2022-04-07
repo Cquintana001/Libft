@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 16:15:45 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/07 09:34:26 by user             ###   ########.fr       */
+/*   Updated: 2022/04/07 13:38:20 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 int ft_atoi(const char *nptr);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
+void *ft_calloc(size_t nmemb, size_t size);
+char *ft_strdup(const char *src);
 
 
