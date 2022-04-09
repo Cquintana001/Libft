@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:32:21 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/09 13:05:56 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/09 18:52:50 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ char	*ft_strchr(const char *s, int c);
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	x;
-	char d;
+	int		x;
+	char	d;
 
 	d = c;
 	x = 0;
