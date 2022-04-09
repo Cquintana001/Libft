@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 08:32:25 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/06 14:12:59 by user             ###   ########.fr       */
+/*   Updated: 2022/04/09 12:01:05 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- 
-
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 /* int main()
 { 	char array1[] = "Hola Carlos";
@@ -31,25 +29,19 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 	
 	} */
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-
-	char* s1;
-	char* s2;
-
-	size_t x;
+	char	*s1;
+	char	*s2;
+	size_t	x;
 
 	x = 0;
-	 
 	s1 = dst;
-	s2 = (char*)src;
-	while(src + x && x < n)
+	s2 = (char *)src;
+	while (src + x && x < n)
 	{
 		s1[x] = s2[x];
 		x++;
 	}
-	return(dst);
-
+	return (dst);
 }
- 
-

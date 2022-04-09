@@ -21,7 +21,7 @@ SRC = ft_isdigit.c 	\
 	ft_memcmp.c    \
 	ft_calloc.c    \
 	ft_strdup.c    \
-	ft_split.c     \
+	ft_strncmp.c
 	 
 	 
 

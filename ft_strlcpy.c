@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:10:29 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/03 18:33:11 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/09 12:02:58 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include <unistd.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+size_t	ft_strlcpy(char *dst, const char *src,
 			size_t dstsize);
 
 /* int main()
@@ -35,7 +35,7 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	printf("%s", dest);
 	
 } */
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {	
 	size_t	x;
 	size_t	size;

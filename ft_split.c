@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/08 12:47:57 by user             ###   ########.fr       */
+/*   Updated: 2022/04/09 10:31:00 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-int		count_words(char const *s, char c)
+/* int		count_words(char const *s, char c)
 {
 	int		count;
 	int		i;
@@ -75,4 +75,4 @@ char	**ft_split(char const *s, char c)
 	ptr[i] = 0;
 	return (ptr);
 }
- 
+ */ 
