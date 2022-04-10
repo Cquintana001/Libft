@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 11:27:29 by user              #+#    #+#             */
-/*   Updated: 2022/04/09 11:28:44 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/10 10:53:09 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,15 @@ int	main(void)
 	return (0);
 }*/
 char	*ft_strdup(const char *s)
-{	
+{
 	char	*array;
 	int		x;
 
 	x = ft_strlen(s);
-	array = malloc(sizeof(s) * x);
+	array = malloc(x + 1);
 	x = 0;
 	if (!array)
-		return (0);
+		return (NULL);
 	else
 	{
 		x = 0;

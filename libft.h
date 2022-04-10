@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 16:15:45 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/09 11:59:49 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:51:03 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *src);
-//char **ft_split(char const *s, char c);
+char **ft_split(char const *s, char c);
 

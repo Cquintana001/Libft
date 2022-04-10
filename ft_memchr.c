@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:18:25 by user              #+#    #+#             */
-/*   Updated: 2022/04/09 13:01:39 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/10 16:28:59 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 #include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n);
-/*int main()
+/* int main()
 {
-	int		tab[7];
+	char	tab[] = "";
 	size_t	x;
 	char	*q;
 
-    tab[7] = {-49, 49, 1, -1, 0, -2, 2};
-		printf("%s\n", (char *)ft_memchr(tab, -1, 7));
-        printf("%s\n", (char *)memchr(tab, -1, 7));
+       
+		printf("%s\n", (char *)ft_memchr(tab, 2, 3));
+        printf("%s\n", (char *)memchr(tab, 2, 3));
     return (0);
-}*/
+} */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {	
