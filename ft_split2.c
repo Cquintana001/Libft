@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/10 13:07:16 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:42:09 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-  /* int		count_words(char const *s, char c)
+  int		count_words(char const *s, char c)
 	{
 	int		count;
 	int		i;
@@ -31,33 +31,9 @@
 			i++;
 	}
 	return (count);
-} */
-
-int count_words(char const *s, char c)
-
-{ 	
-	int i;
-	int count;
-
-	i=0;
-	count=0;
-
-	while(s[i])
-	{
-		if(s[i]!=c)
-		{
-			count++;
-			while(s[i]!=c)
-			{
-				i++;
-			}
-		}
-		i++;
-	}
-
-	return(count);
-	
 }
+
+ 
 
  
 char	*init_str(char const *s, char c)

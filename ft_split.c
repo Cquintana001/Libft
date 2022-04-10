@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/10 16:57:37 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:42:43 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int count_words(char const *s, char c)
 
 	while(s[i])
 	{
-		if(s[i]!=c)
+		if(s[i]!= c)
 		{
 			count++;
-			while(s[i]!=c)
+			
+			while(s[i]!=c && s[i])
 			{
 				i++;
 			}
@@ -40,11 +41,29 @@ int count_words(char const *s, char c)
 	return(count);	
 }
 
+int count_letters(char const *s, char c)
+
+{
+	int i;
+	int count;
+
+	count = 0;
+	i = 0;
+	while(s[i])
+	{	if(s[i] != c)
+		{
+			count++;		
+		}
+		i++;	
+	}
+	return(count);
+}
+
  
 
-char	**ft_split(char const *s, char c)
+   char	**ft_split(char const *s, char c)
 {
-	char **ptr = malloc(count_words(s,c) +1);
+	char *ptr = malloc(count_words(s,c) * count_letters(s,c) + count_words(s,c));
 	int x;
 	int i;
 	int y;
@@ -53,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	x = 0;
 	while(s[x])
 	{	i=0;
-		while(s[x]!=c)
+		while(s[x]!=c && s[x])
 		{
 			ptr[y][i] = s[x];
 			i++;
@@ -63,15 +82,19 @@ char	**ft_split(char const *s, char c)
 		x++;
 		y++;	
 	}
+
+	free(ptr);
 	return(ptr);
-}
+}   
 
 int main()
 {
-	char array[] = "abaabaaabaaaa";
+	char *array = "abaabaaabaaaa\0";
 	char c = 'b';
+	printf("El número de palabras de mi string es: %d\n", count_words(array,c));
+	printf("El número de letras de mi string es: %d\n", count_letters(array,c));
 	char **array2 = ft_split(array, c);
-	printf("La primera string es: %c",array2[0][1] );
+	 
 	return (0);
 
 }
