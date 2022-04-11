@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 10:25:40 by user              #+#    #+#             */
-/*   Updated: 2022/04/10 18:50:48 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/11 17:17:57 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
