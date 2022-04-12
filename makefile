@@ -23,7 +23,8 @@ SRC = ft_isdigit.c 	\
 	ft_strdup.c    \
 	ft_strncmp.c	\
 	ft_substr.c   \
-	 
+	ft_strjoin.c \
+	ft_strtrim.c
 	 
 
 CFLAGS = -Wall -Werror -Wextra
