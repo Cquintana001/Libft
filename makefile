@@ -32,17 +32,22 @@ SRC = ft_isdigit.c 	\
 	ft_putstr_fd.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c
+
+ 
+
 CFLAGS = -Wall -Werror -Wextra
 
 OBJ = $(SRC:.c=.o)
+ 
+
 $(NAME) :$(OBJ) 
 	ar -csr $(NAME) $(OBJ)
-
+ 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
-
+   
 clean:
 	rm -f *.o
 
