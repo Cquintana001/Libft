@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/13 11:44:44 by user             ###   ########.fr       */
+/*   Updated: 2022/04/13 11:48:54 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char *ft_itoa(int n);
  
-  int main()
+  /* int main()
 {
     int		len;
     char *res = ft_itoa(-2147483648LL);
@@ -31,34 +31,33 @@ char *ft_itoa(int n);
 
     return (0);
 
-} 
+}  */
 char *ft_itoa(int n)
 {
     char *ptr;
     int checksign;
     int size;
     int numb;
-    printf("el valor de mi n es: %d\n", n);
-      
-  
+     
+   if(n ==-2147483648)
+    {ptr = "-2147483648";
+    return (ptr);
+    }
     size = 0;
     if(n<0)
     { checksign = 1;
         n *=-1;
         size++;
-        printf("el valor de n es: %d\n", n);
+         
     }
-    numb = n;
-    printf("el valor de mi size es: %d\n", size);
+    numb = n;   
   while (numb>=10)
   {
       numb = (numb - numb%10)/10;
       size++;  
   }
   numb = n;   
-  size++; 
-      printf("el valor de mi size es: %d\n", size);
-      
+  size++;    
     ptr =(char*) malloc(size +1);
     if(checksign==1)       
         ptr[0] = '-';

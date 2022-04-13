@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 12:40:10 by user              #+#    #+#             */
-/*   Updated: 2022/04/13 12:07:21 by user             ###   ########.fr       */
+/*   Created: 2022/04/13 12:14:24 by user              #+#    #+#             */
+/*   Updated: 2022/04/13 12:24:15 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
-#include <stdlib.h>
+#include <unistd.h>
+
+void ft_putstr_fd(char *s, int fd);
+size_t	ft_strlen(const char *s);
 
 
- char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
- size_t	ft_strlen(const char *s);
+void ft_putstr_fd(char *s, int fd)
+{
+    int len;
+     
+     len = ft_strlen(s);
 
- char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
- {
-     int x;
-    char *ptr = malloc(ft_strlen(s)+1);
+     write(fd, s, len);
 
-     x = 0;
-     while(s[x])
-     {
-        ptr[x] = f(x, s[x]);
-        x++;
-     }
-     ptr[x] = '\0';
-    
-    return(ptr);
-    
 }
