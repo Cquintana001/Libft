@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 16:15:45 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/13 12:29:39 by user             ###   ########.fr       */
+/*   Updated: 2022/04/13 12:41:33 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*));
 void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 //char **ft_split(char const *s, char c);
 
