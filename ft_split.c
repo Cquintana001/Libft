@@ -6,95 +6,69 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/10 18:42:43 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:16:33 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
-
-   
-
-int count_words(char const *s, char c)
-
-{ 	
+static int	count_words(const char *str, char c)
+{
 	int i;
-	int count;
+	int trigger;
 
-	i=0;
-	count=0;
-
-	while(s[i])
+	i = 0;
+	trigger = 0;
+	while (*str)
 	{
-		if(s[i]!= c)
+		if (*str != c && trigger == 0)
 		{
-			count++;
-			
-			while(s[i]!=c && s[i])
-			{
-				i++;
-			}
+			trigger = 1;
+			i++;
+		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
+	}
+	return (i);
+}
+
+static char	*word_dup(const char *str, int start, int finish)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
+}
+
+char		**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
+
+	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		{
+			split[j++] = word_dup(s, index, i);
+			index = -1;
 		}
 		i++;
 	}
-	return(count);	
-}
-
-int count_letters(char const *s, char c)
-
-{
-	int i;
-	int count;
-
-	count = 0;
-	i = 0;
-	while(s[i])
-	{	if(s[i] != c)
-		{
-			count++;		
-		}
-		i++;	
-	}
-	return(count);
-}
-
- 
-
-   char	**ft_split(char const *s, char c)
-{
-	char *ptr = malloc(count_words(s,c) * count_letters(s,c) + count_words(s,c));
-	int x;
-	int i;
-	int y;
-
-	y =0;
-	x = 0;
-	while(s[x])
-	{	i=0;
-		while(s[x]!=c && s[x])
-		{
-			ptr[y][i] = s[x];
-			i++;
-			x++;
-		}
-		ptr[y][i] = '\0';
-		x++;
-		y++;	
-	}
-
-	free(ptr);
-	return(ptr);
-}   
-
-int main()
-{
-	char *array = "abaabaaabaaaa\0";
-	char c = 'b';
-	printf("El número de palabras de mi string es: %d\n", count_words(array,c));
-	printf("El número de letras de mi string es: %d\n", count_letters(array,c));
-	char **array2 = ft_split(array, c);
-	 
-	return (0);
-
+	split[j] = 0;
+	return (split);
 }

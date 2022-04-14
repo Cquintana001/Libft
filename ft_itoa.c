@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/13 11:48:54 by user             ###   ########.fr       */
+/*   Updated: 2022/04/14 15:48:36 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char *ft_itoa(int n);
  
-  /* int main()
+ /* int main()
 {
     int		len;
     char *res = ft_itoa(-2147483648LL);
@@ -26,12 +26,12 @@ char *ft_itoa(int n);
 		len++;
     printf("El valor de mi len es: %d\n", len);
     printf("El valor de mi res es: %s\n", res); 
-
+    
  
 
     return (0);
 
-}  */
+}    */
 char *ft_itoa(int n)
 {
     char *ptr;
@@ -39,10 +39,11 @@ char *ft_itoa(int n)
     int size;
     int numb;
      
-   if(n ==-2147483648)
-    {ptr = "-2147483648";
-    return (ptr);
-    }
+    /* if(n ==-2147483648)
+    { ptr =(char*) malloc(13);
+      ptr = "-2147483648\0";
+      return (ptr);
+    }  */
     size = 0;
     if(n<0)
     { checksign = 1;

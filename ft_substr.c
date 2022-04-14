@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:23:08 by user              #+#    #+#             */
-/*   Updated: 2022/04/11 17:52:14 by user             ###   ########.fr       */
+/*   Updated: 2022/04/14 14:12:43 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,36 @@
 #include <stdio.h>
 
 char *ft_substr(char const *s, unsigned int start, size_t len);
-/* int main()
+size_t	ft_strlen(const char *s);
+ 
+  /* int main()
 {
 
-printf("El valor de mi funcion es: %s",ft_substr("hola a todos", 5, 6));
+    char *s = 	s = ft_substr("tripouille", 100, 1);
 
-return (0);
+	 
+     printf("%s\n", s);
+    return(0);
 
+}   */
 
-} */
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     size_t x;
-
+    size_t len1;
+    char *ptr;
+    ptr = "";
+    len1 = ft_strlen(s);
+    if(start < len1)
+        ptr = malloc(len1-start);
+    else if(start>= len1)
+    {       ptr = malloc(1);
+        return(ptr);
+    }
     x = 0;
-    char *ptr = malloc(len+1);
     
-    while(s[x] && x<len)
+ 
+    while(s[x] && x<len )
     {
         ptr[x] = s[start];
         x++;
