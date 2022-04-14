@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:23:08 by user              #+#    #+#             */
-/*   Updated: 2022/04/14 14:12:43 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:15:56 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,31 @@
 char *ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);
  
-  /* int main()
+/*  int main()
 {
-
-    char *s = 	s = ft_substr("tripouille", 100, 1);
-
-	 
-     printf("%s\n", s);
+    char	str[] = "lorem ipsum dolor sit amet";
+	char	*strsub;
+    
+   char *bullshit;
+		if (!(strsub = ft_substr(str, 400, 20)))
+		{	printf("NULL\n");
+            
+        }
+		else
+		{
+			bullshit = (char *)&strsub[30];
+			bullshit = "FULL BULLSHIT";
+			if (strsub)
+				printf("%s", strsub);
+			else
+				printf("rip");
+		}
+		if (str == strsub)
+			printf("\nA new string was not returned");
+		(void)bullshit;
     return(0);
 
-}   */
+}    */
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -35,20 +50,22 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char *ptr;
     ptr = "";
     len1 = ft_strlen(s);
-    if(start < len1)
-        ptr = malloc(len1-start);
-    else if(start>= len1)
-    {       ptr = malloc(1);
-        return(ptr);
-    }
+    if(len < len1)
+        ptr = malloc(len);
+    else
+        ptr = malloc(len1);
+    // else if(start >= len1)               
+    //     return(ptr);
     x = 0;
-    
- 
-    while(s[x] && x<len )
+
+    if(start < len1)
     {
-        ptr[x] = s[start];
-        x++;
-        start++;
+        while(s[start] && x<len)
+        {
+            ptr[x] = s[start];
+            x++;
+            start++;
+        }
     }
     ptr[x] = '\0';
 
