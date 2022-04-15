@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 12:14:24 by user              #+#    #+#             */
-/*   Updated: 2022/04/15 09:59:49 by caquinta         ###   ########.fr       */
+/*   Created: 2022/04/13 13:19:03 by user              #+#    #+#             */
+/*   Updated: 2022/04/15 12:13:53 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+#include <stdlib.h>
 
-void ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *s);
+t_list *ft_lstnew(void *content)
 
-void ft_putstr_fd(char *s, int fd)
 {
-    int len;
-     
-     len = ft_strlen(s);
-     write(fd, s, len);
+	t_list	*new;
+		 
+	new = (t_list*)malloc(sizeof(t_list));
+	if(!new)
+		return(NULL);
+    new->content = content;
+	new->next = NULL;
+	return(new);
 }

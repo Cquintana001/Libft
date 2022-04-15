@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/14 17:23:38 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/15 09:58:41 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char *ft_itoa(int n);
  
- /* int main()
+  /* int main()
 {
     int		len;
     char *res = ft_itoa(-2147483648LL);
@@ -31,7 +31,8 @@ char *ft_itoa(int n);
 
     return (0);
 
-}    */
+}     */
+
 char *ft_itoa(int n)
 {
     char *ptr;
@@ -39,12 +40,8 @@ char *ft_itoa(int n)
     int size;
     int numb;
      
-    /* if(n ==-2147483648)
-    { ptr =(char*) malloc(13);
-      ptr = "-2147483648\0";
-      return (ptr);
-    }  */
     size = 0;
+       
     if(n<0)
     { checksign = 1;
         n *=-1;

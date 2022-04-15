@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 16:15:45 by caquinta          #+#    #+#             */
-/*   Updated: 2022/04/14 14:14:46 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/15 12:13:55 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 char **ft_split(char const *s, char c);
-/* typedef struct s_list
+typedef struct s_list
 {
     void *content;
     struct s_list *next;
+}
                 t_list; 
-  */
- 
+t_list *ft_lstnew(void *content);
 
