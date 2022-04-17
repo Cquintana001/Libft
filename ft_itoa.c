@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/15 09:58:41 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/17 14:30:24 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char *ft_itoa(int n);
  
-  /* int main()
+  /*  int main()
 {
     int		len;
     char *res = ft_itoa(-2147483648LL);
@@ -31,42 +31,43 @@ char *ft_itoa(int n);
 
     return (0);
 
-}     */
+}      */
 
 char *ft_itoa(int n)
 {
     char *ptr;
     int checksign;
     int size;
-    int numb;
+    long numb;
+    long t = n;
      
     size = 0;
        
-    if(n<0)
+    if(t<0)
     { checksign = 1;
-        n *=-1;
+        t *=-1;
         size++;
          
     }
-    numb = n;   
+    numb = t;   
   while (numb>=10)
   {
       numb = (numb - numb%10)/10;
       size++;  
   }
-  numb = n;   
+  numb = t;   
   size++;    
     ptr =(char*) malloc(size +1);
     if(checksign==1)       
         ptr[0] = '-';
   ptr[size]= '\0';
-  while(n>=10)
+  while(t>=10)
   {    
-    ptr[size-1] = (n%10) + '0';  
-    n = (n - n%10)/10;
+    ptr[size-1] = (t%10) + '0';  
+    t = (t - t%10)/10;
     size--;
   }  
-  ptr[size-1]= n + '0'; 
+  ptr[size-1]= t + '0'; 
     return(ptr);
 }
   
