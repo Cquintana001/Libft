@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:02:04 by user              #+#    #+#             */
-/*   Updated: 2022/04/14 09:04:46 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/18 12:35:53 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char *ft_strtrim(char const *s1, char const *set)
     int j;
     int index;
     int check;
+    char *ptr;
 
     index = ft_strlen(s1) -1;
     x = 0;
@@ -64,7 +65,9 @@ char *ft_strtrim(char const *s1, char const *set)
         else
             break;              
     }
-    char *ptr = malloc(index -x +2);
+    if (!(ptr = (char*)malloc(index-x+2)))
+		return (NULL);    
+    
     j = 0;
     while(x<= index)
     {

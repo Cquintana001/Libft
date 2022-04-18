@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:23:08 by user              #+#    #+#             */
-/*   Updated: 2022/04/17 14:47:07 by user             ###   ########.fr       */
+/*   Updated: 2022/04/18 12:37:23 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         ptr = malloc(len +1 );
     else
         ptr = malloc(len1 +1);
-    // else if(start >= len1)               
-    //     return(ptr);
+    if(!ptr)
+        return (NULL);
     x = 0;
 
     if(start < len1)

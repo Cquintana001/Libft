@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/17 14:30:24 by user             ###   ########.fr       */
+/*   Updated: 2022/04/18 12:32:22 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 
 char *ft_itoa(int n);
+size_t	ft_strlen(const char *s);
  
   /*  int main()
 {
@@ -56,8 +57,9 @@ char *ft_itoa(int n)
       size++;  
   }
   numb = t;   
-  size++;    
-    ptr =(char*) malloc(size +1);
+  size++;
+  if (!(ptr = (char*)malloc(sizeof(char) * size + 1)))
+		return (NULL);    
     if(checksign==1)       
         ptr[0] = '-';
   ptr[size]= '\0';

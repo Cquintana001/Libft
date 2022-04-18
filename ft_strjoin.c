@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 08:34:35 by user              #+#    #+#             */
-/*   Updated: 2022/04/12 09:01:26 by user             ###   ########.fr       */
+/*   Updated: 2022/04/18 12:51:23 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ char *ft_strjoin(char const *s1, char const *s2)
      x =0;
 
     
-    ptr = malloc(ft_strlen(s1)+ ft_strlen(s2)+1);
+    if(!(ptr = malloc(ft_strlen(s1)+ ft_strlen(s2)+1)))
+        return (NULL);
     while(s1[x])
     {
             ptr[x] = s1[x];
