@@ -32,14 +32,24 @@ SRC = ft_isdigit.c 	\
 	ft_putstr_fd.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c\
-	ft_split.c\
-	ft_lstnew_bonus.c
+	ft_split.c
+
+SRC2 = ft_lstnew_bonus.c\
+	ft_lstadd_front_bonus.c\
+	ft_lstsize_bonus.c\
+	ft_lstlast_bonus.c\
+	ft_lstadd_back_bonus.c\
+	ft_lstdelone_bonus.c\
+	ft_lstclear_bonus.c\
+	ft_lstiter_bonus.c\
+	ft_lstmap_bonus.c
 
  
 
 CFLAGS = -Wall -Werror -Wextra
 
 OBJ = $(SRC:.c=.o)
+OBJ2 = $(SRC2: .c=.o)
  
 
 $(NAME) :$(OBJ) 
@@ -49,7 +59,9 @@ $(NAME) :$(OBJ)
 
 all: $(NAME)
 
-   
+bonus :  $(OBJ) $(OBJ2)
+	ar rcs $(NAME) $(OBJ) $(OBJ2)
+
 clean:
 	rm -f *.o
 
