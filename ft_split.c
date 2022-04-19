@@ -3,43 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/14 14:16:33 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/19 08:35:10 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+/* function that count the amount of words 
+you get when separated by c. */
+
 static int	count_words(const char *str, char c)
 {
-	int i;
-	int trigger;
+	int x;
+	int checkw;
 
-	i = 0;
-	trigger = 0;
+	x = 0;
+	checkw = 0; 
 	while (*str)
 	{
-		if (*str != c && trigger == 0)
+		if (*str != c && checkw == 0)
 		{
-			trigger = 1;
-			i++;
+			checkw = 1;
+			x++;
 		}
 		else if (*str == c)
-			trigger = 0;
+			checkw = 0;
 		str++;
 	}
-	return (i);
+	return (x);
 }
-
-static char	*word_dup(const char *str, int start, int finish)
+/* function that measure the length of 
+the string between two index and then store that string in a local variable "word"
+ */
+static char	*word_length(const char *str, int start, int finish)
 {
 	char	*word;
 	int		i;
 
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
+	word = malloc(((finish - start) + 1) * sizeof(char));
 	while (start < finish)
 		word[i++] = str[start++];
 	word[i] = '\0';
@@ -64,7 +70,7 @@ char		**ft_split(char const *s, char c)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			split[j++] = word_dup(s, index, i);
+			split[j++] = word_length(s, index, i);
 			index = -1;
 		}
 		i++;
