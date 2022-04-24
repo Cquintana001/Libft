@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:22:03 by user              #+#    #+#             */
-/*   Updated: 2022/04/18 07:58:34 by user             ###   ########.fr       */
+/*   Updated: 2022/04/24 09:34:23 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
- 
-void ft_lstadd_front(t_list **lst, t_list *new)
 
-{       
+void	ft_lstadd_front(t_list **lst, t_list *new)
+
+{
 	new->next = *lst;
-	    *lst = new;
+	*lst = new;
 }

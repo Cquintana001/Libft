@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:02:51 by user              #+#    #+#             */
-/*   Updated: 2022/04/19 08:35:10 by user             ###   ########.fr       */
+/*   Updated: 2022/04/24 10:20:51 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ you get when separated by c. */
 
 static int	count_words(const char *str, char c)
 {
-	int x;
-	int checkw;
+	int	x;
+	int	checkw;
 
 	x = 0;
-	checkw = 0; 
+	checkw = 0;
 	while (*str)
 	{
 		if (*str != c && checkw == 0)
@@ -36,9 +36,7 @@ static int	count_words(const char *str, char c)
 	}
 	return (x);
 }
-/* function that measure the length of 
-the string between two index and then store that string in a local variable "word"
- */
+
 static char	*word_length(const char *str, int start, int finish)
 {
 	char	*word;
@@ -52,14 +50,15 @@ static char	*word_length(const char *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;

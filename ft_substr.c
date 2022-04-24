@@ -3,71 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:23:08 by user              #+#    #+#             */
-/*   Updated: 2022/04/18 12:37:23 by user             ###   ########.fr       */
+/*   Updated: 2022/04/24 10:45:13 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 size_t	ft_strlen(const char *s);
-char *ft_substr(char const *s, unsigned int start, size_t len);
- 
- /* int main()
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char	str[] = "lorem ipsum dolor sit amet";
-	char	*strsub;
-    
-   
-		if (!(strsub = ft_substr(str, 0, 10)))
-			printf("NULL");
-		else
-			printf("%s\n",strsub);
-		if (str == strsub)
-			printf("\nA new string was not returned");
-          
+	size_t	x;
+	size_t	len1;
+	char	*ptr;
 
-         if (!(strsub = ft_substr(str, 7, 10)))
-			printf("NULL");
-		else
-			printf("%s",strsub);
-		if (str == strsub)
-			printf("\nA new string was not returned");   
-    return(0);
-
-}     */
-
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    size_t x;
-    size_t len1;
-    char *ptr;
-    ptr = "";
-    len1 = ft_strlen(s);
-    if(len < len1)
-        ptr = malloc(len +1 );
-    else
-        ptr = malloc(len1 +1);
-    if(!ptr)
-        return (NULL);
-    x = 0;
-
-    if(start < len1)
-    {
-        while(s[start] && x<len)
-        {
-            ptr[x] = s[start];
-            x++;
-            start++;
-        }
-    }
-    ptr[x] = '\0';
-
-    return(ptr);
-
+	ptr = "";
+	len1 = ft_strlen(s);
+	x = 0;
+	if (len < len1)
+		ptr = malloc(len + 1);
+	else
+		ptr = malloc(len1 + 1);
+	if (!ptr)
+		return (NULL);
+	if (start < len1)
+	{
+		while (s[start] && x < len)
+		{
+			ptr[x] = s[start];
+			x++;
+			start++;
+		}
+	}
+	ptr[x] = '\0';
+	return (ptr);
 }
