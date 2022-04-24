@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:10:37 by user              #+#    #+#             */
-/*   Updated: 2022/04/24 09:30:51 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/24 12:21:35 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 char	*ft_itoa(int n);
 size_t	ft_strlen(const char *s);
 
-int	ft_itoa_get_size(long t)
+int	static	ft_itoa_get_size(long t)
 {
 	int		size;
 

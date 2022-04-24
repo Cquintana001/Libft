@@ -6,29 +6,23 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:02:04 by user              #+#    #+#             */
-/*   Updated: 2022/04/24 10:36:33 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/24 13:47:55 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 char	*ft_strtrim(char const *s1, char const *set);
-size_t	ft_strlen(const char *s);
 
-/* int main()
+int	ft_trim_left(char const *s1, char const *set)
 {
-    printf("La string es: %s", ft_strtrim("carlos", "abc"));
-    return(0);
-} */
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		x;
-	int		j;
-	int		index;
-	int		check;
-	char	*ptr;
+	int	x;
+	int	j;
+	int	index;
+	int	check;
 
 	index = ft_strlen(s1) - 1;
 	x = 0;
@@ -48,6 +42,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
+	return (x);
+}
+
+int	ft_trim_right(char const *s1, char const *set, int x)
+{
+	int	j;
+	int	index;
+	int	check;
+
+	index = ft_strlen(s1) - 1;
+	check = 0;
 	while (index > x)
 	{
 		j = 0;
@@ -63,6 +68,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
+	return (index);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		x;
+	int		j;
+	int		index;
+	int		check;
+	char	*ptr;
+
+	if (!s1 && !set)
+		return (NULL);
+	x = ft_trim_left(s1, set);
+	index = ft_trim_right(s1, set, x);
 	ptr = (char *)malloc(index - x + 2);
 	if (!ptr)
 		return (NULL);
