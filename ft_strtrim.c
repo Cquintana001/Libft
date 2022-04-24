@@ -6,7 +6,7 @@
 /*   By: caquinta <caquinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:02:04 by user              #+#    #+#             */
-/*   Updated: 2022/04/24 13:47:55 by caquinta         ###   ########.fr       */
+/*   Updated: 2022/04/24 16:24:46 by caquinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		x;
 	int		j;
 	int		index;
-	int		check;
 	char	*ptr;
 
 	if (!s1 && !set)
